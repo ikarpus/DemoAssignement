@@ -1,0 +1,28 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Demo"
+include ':app'
+include ':core:ui'
+include ':core:data'
+include ':core:utils'
+include ':navigation'
+
+include ':feature:user:domain'
+include ':feature:user:data'
+include ':feature:user:ui'
+
+include ':feature:feed:domain'
+include ':feature:feed:data'
+include ':feature:feed:ui'

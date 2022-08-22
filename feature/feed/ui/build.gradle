@@ -1,0 +1,21 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+apply from: rootProject.file("android-configuration.gradle")
+
+android {
+
+    resourcePrefix 'feed_'
+}
+
+dependencies {
+
+    sharedGroup dependencies
+
+    implementation project(':core:ui')
+    implementation project(':feature:feed:domain')
+
+}

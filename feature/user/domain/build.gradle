@@ -1,0 +1,13 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+apply from: rootProject.file("android-configuration.gradle")
+
+dependencies {
+
+    sharedGroup dependencies
+
+    implementation project(':feature:feed:domain')
+}

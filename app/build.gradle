@@ -1,0 +1,33 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+apply from: rootProject.file("android-configuration.gradle")
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.iskar.demo"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+}
+
+dependencies {
+
+    sharedGroup dependencies
+
+    implementation project(':core:data')
+    implementation project(':core:ui')
+    implementation project(':navigation')
+
+    implementation project(':feature:user:ui')
+    implementation project(':feature:user:data')
+    implementation project(':feature:user:domain')
+
+    implementation project(':feature:feed:ui')
+    implementation project(':feature:feed:data')
+    implementation project(':feature:feed:domain')
+}
